@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  app:
+    container_name: jikgong-a
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./log:/log
+    ports:
+      - "8080:8080"
+    restart: always
